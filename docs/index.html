@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  <title>docs</title>
-  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/docute.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="vendor/themes/vue.css">
 </head>
-
 <body>
-<div id="app"></div>
-<script src="https://unpkg.com/axios/dist/axios.js"></script>
-<script src="https://unpkg.com/bluebird"></script>
-<script src="https://unpkg.com/lodash"></script>
-<script src="https://unpkg.com/archieml"></script>
-<script src="https://unpkg.com/docute@3/dist/docute.js"></script>
-<script>
-docute.init({
-  landing: {
-    markdown: '## counter\n {{ count }} \n [{{yeah}}] yee boi',
-    component: {
-      data() {
-        return { count: 12, yeah: true }
-      }
-    }
-  }
-})
-</script>
+  <div id="app"></div>
+  <script>
+    // window.$docsify = {
+    //   name: 'ironybemyshield-gh-pages',
+    //   repo: ''
+    // }
+  </script>
+  <script src="vendor/docsify.js"
+  data-coverpage="landing.md"
+  data-load-navbar="nav.md"
+  data-name="ASA"
+  data-homepage="home.md">
+  </script>
 </body>
-
 </html>

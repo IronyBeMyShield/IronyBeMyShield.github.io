@@ -1,8 +1,0 @@
-debug: true
-tocVisibleDepth: 3
-home: README.md
-routerMode: history
-{landing}
-markdown: '## counter\n {{ count }}'
-component.data.a: 200
-{}
