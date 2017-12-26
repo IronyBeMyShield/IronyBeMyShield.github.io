@@ -1,0 +1,86 @@
+<%- css(['sass/style']) %>
+<main class="app-body container" >
+  <h1><%- site.data.current[0].name %></h1>
+  <p class="article-date"><%- date(site.data.current.date, "LL") %></p>
+  <ul>
+  <%- site.categories.find({}).map(function(cat){return `<li><a href="/${ cat.path }">${ cat.name }</a></li>`}).join('') %>
+</ul>
+  <% console.log(site.categories.find({}).map(function(cat){return cat.path})) %>
+    <section class="container__inner post-section agenda" style="margin-top: 40px;">
+  <% site.categories.findOne({name: site.data.current[0].name}).posts.sort('time').each(function(post) { %>
+    <article class="event__container">
+      <div class="event-card">
+        <div class="event__header">
+          <div class="event__images-container">
+            <img class="event__image" src="https://placehold.it/120">
+            <h3 class="event__time"><%- post.time %></h3>
+          </div>
+          <div class="event__header-content">
+              <h2 class="event__author">
+                  <%- post.author %>
+              </h2>
+            <p class="article-date"><%- date(post.date, "LL") %></p>
+            <% if (post.excerpt) { %>
+              <div class="details event-card--expanded">
+                <div class="summary" >
+                    <h3 class="event__topic">
+                        <%- post.title %>
+                    </h2>
+                    <p class="event__description article-summary markdown-content">
+                      <%- post.excerpt %>
+                    </p>
+                  </div>
+                <div class="details__content">
+                <p class="article-summary markdown-content"></p>
+              <%- post.more %>
+                </div>
+              </div>
+            <% } else { %>
+              <%- post.content %>
+            <% } %>
+          </div>
+        </div>
+          <br/>
+
+
+      
+      </article>
+  <% }) %>
+
+  <% if (page.total > 1){ %>
+    <%- partial('_partial/pager') %>
+  <% } %>
+    </section>
+    <style>
+      header {
+        width: 100%!important;
+        max-width: 100%!important;
+      }
+    #archives::before {
+      left: 14px;
+      top: 1rem;
+    }
+    .wrapper {
+      
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .the-time {
+      position: absolute;
+      content: attr(data-time);
+      left: -4em;
+      top: 50%
+
+    }
+    .time-section .section-list .section-list-item{
+      box-shadow: 0 15px 35px rgba(50,50,93,.03),0 5px 15px rgba(0,0,0,.06);
+      padding: 10px;
+    }
+    .time-section .section-list .section-list-item::before{
+      top: 50%;
+    }
+    </style>
+
+</main>

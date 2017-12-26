@@ -1,0 +1,44 @@
+<div id="article-banner">
+  <h2>Archives</h2>
+  <p class="post-date"></p>
+</div>
+<main class="app-body" id="archives">
+  <% site.categories.each(function(cat) { %>
+  <article class="event__container">
+      <div class="event-card">
+        <div class="event__header">
+          <div class="event__images-container">
+            <img class="event__image" src="https://placehold.it/120">
+            <h3 class="event__time">00:00</h3>
+          </div>
+          <div class="event__header-content">
+              <a href="/<%- cat.path %>"><h2 class="event__topic">
+                  <%- cat.name %>
+              </h2>
+            </a>
+            <p class="article-date"><%- cat.slug %></p>
+
+              <div class="details event-card--expanded">
+                <div class="summary" >
+                    <h3 class="event__author">
+                        <%- cat.name %>
+                    </h2>
+                    <p class="event__description article-summary markdown-content">
+                        <%- _.entries(cat).join('\n') %>
+                    </p>
+                  </div>
+              </div>
+          </div>
+        </div>
+          <br/>
+      </article>
+  <% }) %>
+</main>
+
+<script>
+  (function () {
+    var url = '<%= config.url %>/<%= page.path %>';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+</script>

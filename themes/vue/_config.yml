@@ -1,0 +1,28 @@
+author: BCHC
+description: BCHC BI Conf
+keyword:
+favicon: 
+
+excerpt_link: Read more
+
+menu:
+ Home: /
+ # Tags: /tags/
+ Conferences: /confs/
+ # Projects: /project/
+ Survey: https://google.com/
+
+# highlight
+highlight:
+  tomorrow
+
+# catalog
+catalog: true
+
+# about: 
+  # banner:
+  # avatar:
+  # description:
+  # Links
+  # twitter_username:
+  # github_username:
