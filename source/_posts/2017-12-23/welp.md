@@ -1,24 +1,36 @@
 ---
-title: welp
-exclude_excerpt: true
-time: 2020
-date: 2017-12-23 13:25:44
-author: a
-tags:
+title: Welp, a post
+date: 2017-12-22 12:04:59
 ---
 
-asdasd
+There might be more words inside.
+<!-- more --> 
 
-asdasd
+It's got words in it!
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)|asdf
----|---
-b| c
 
-<!-- everything here will be shown in the post preview -->
-<!-- the preview will be excluded from the full view if exclude_excerpt is true -->
+Term 1
+  ~ Definition 1
 
-<!-- main -->
-<!-- everything *here* will only be visible in the full view -->
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+  
+==
+# More Words
 
-d
+More words within!
+
+Term 3
+
+:   Definition
+with lazy continuation.
+
+    Second paragraph of the definition.
+
+The HTML specification
+is maintained by the W3C.
+
+*[words]: These text things, see?
+*[HTML]: Hyper Text Markup Language
+*[W3C]:  World Wide Web Consortium

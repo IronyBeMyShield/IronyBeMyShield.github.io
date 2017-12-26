@@ -2,7 +2,6 @@
 author: auth
 picture: http://google.com
 title: fdassdf
+time: '09:22'
 ---
-A brief extract
-<!-- more -->
-the actual text
+ffffffffffffffff

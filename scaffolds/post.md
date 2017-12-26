@@ -1,12 +1,10 @@
 ---
 title: {{ title }}
 date: {{ date }}
-exclude_excerpt: false
+exclude_excerpt: true
 tags:
 ---
-<!-- everything here will be shown in the post preview -->
-<!-- the preview will be excluded from the full view if exclude_excerpt is true -->
+<!-- the summary goes here -->
 
-
-<!-- main -->
-<!-- everything *here* will only be visible in the full view -->
+<!-- more -->
+<!-- actual content goes here -->
